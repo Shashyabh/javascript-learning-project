@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on off project</title>
+
+    <style>
+        .bulb-container{
+            margin: 25px;
+            padding: 25px;
+        }
+
+        img{
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1> Here is my bulb control</h1>
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">Trun Off</button>
+
+    <div class="bulb-container">
+        <img id="bulb" src="offBulb.png" alt="">
+    </div>
+
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+
+
+    <script>
+        const turnOn=()=>{
+            let imageOb=document.getElementById("bulb");
+            imageOb.setAttribute('src','onBulb.png')
+        }
+
+        const turnOff=()=>{
+            let imageOb=document.getElementById("bulb");
+            imageOb.setAttribute('src','offBulb.png');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom styling</title>
+    <style>
+        .red{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="getStyle()">Get inforramtion</button>
+    <h1 id="main">Hello World</h1>
+    <h2 id="sub">This is heading</h2>
+    <h2 id="subsub">This is subSub heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum asperiores unde ratione incidunt cupiditate sint quos facilis voluptatibus delectus nisi fuga rerum facere ut, maxime itaque placeat consequuntur rem repellat similique repudiandae exercitationem, iste nihil. Accusamus molestiae officia velit soluta mollitia optio autem aliquam, ullam officiis voluptates illo esse hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis id provident quis qui hic error eligendi, cupiditate, fugiat sint illum doloremque odio quas eaque sequi dolores voluptatem earum vero sunt consequuntur adipisci! Eveniet nam libero ut nemo saepe, neque at repellendus. Nostrum sequi, excepturi, ducimus consequatur perferendis error fuga distinctio harum reprehenderit, odio ut voluptates. Quas recusandae voluptate cupiditate, perferendis in commodi consectetur fugit accusamus fuga quae aliquid. Illum, at, veritatis, minima aperiam ullam error ipsam quam dolores totam et impedit eos nisi voluptatum omnis laboriosam eveniet. Odit facere consectetur quisquam, culpa consequatur vel laborum sequi voluptatibus obcaecati magnam! Maiores odit dolor magnam ipsam, perferendis inventore quos vitae odio praesentium culpa ipsum tenetur eius cum commodi blanditiis, repellat deleniti. Deleniti aspernatur sapiente possimus. Error veritatis cupiditate eius dolore, dolor non. Magni voluptatum dolorem numquam ex veniam cumque perspiciatis officia fugit dignissimos dolor et illum aspernatur amet fugiat sint dolores corrupti ratione exercitationem voluptas dolorum, accusantium, magnam impedit iste quam? Harum voluptatem recusandae reprehenderit magnam id, impedit non doloremque exercitationem fugit nobis, quae culpa architecto eum optio maxime quia enim doloribus sapiente nemo veritatis deleniti nulla fuga commodi sunt! Voluptate, ipsa aperiam? Voluptate sed accusamus, hic vel culpa alias aperiam ad.</p>
+
+
+    <script>
+        let mainOb=document.getElementById("main");
+
+        //Appling style on objects
+        
+
+        const changeStyle=()=>{
+            mainOb.style.color="blue";
+            mainOb.style.fontSize="50px" 
+
+           // mainOb.className=mainOb.className+"red";
+        }
+
+        const getStyle=()=>{
+            //console.log(mainOb.style.color);
+
+            let styles=window.getComputedStyle(mainOb);
+            console.log(styles.getPropertyValue("color"));
+        }
+    </script>
+</body>
+</html>
